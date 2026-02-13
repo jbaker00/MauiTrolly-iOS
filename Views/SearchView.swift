@@ -9,9 +9,11 @@ import SwiftUI
 
 struct SearchView: View {
     @ObservedObject var viewModel: BookingViewModel
+    @State private var availableWidth: CGFloat = UIScreen.main.bounds.width
     
     var body: some View {
-        ScrollView {
+        VStack(spacing: 0) {
+            ScrollView {
             VStack(spacing: 0) {
                 // Header
                 VStack(spacing: 8) {
@@ -54,7 +56,9 @@ struct SearchView: View {
                                 }
                                 .pickerStyle(.menu)
                                 .tint(Color(red: 0, green: 0.4, blue: 0.8))
+                                .lineLimit(1)
                             }
+                            .frame(maxWidth: .infinity)
                             
                             Button(action: viewModel.swapLocations) {
                                 Image(systemName: "arrow.up.arrow.down")
@@ -64,6 +68,7 @@ struct SearchView: View {
                                     .background(Color.gray.opacity(0.1))
                                     .cornerRadius(8)
                             }
+                            .frame(width: 44)
                             
                             VStack(alignment: .leading, spacing: 4) {
                                 Text("TO")
@@ -77,7 +82,9 @@ struct SearchView: View {
                                 }
                                 .pickerStyle(.menu)
                                 .tint(Color(red: 0, green: 0.4, blue: 0.8))
+                                .lineLimit(1)
                             }
+                            .frame(maxWidth: .infinity)
                         }
                         
                         // Time Row
@@ -187,8 +194,21 @@ struct SearchView: View {
                 }
                 .padding()
             }
+            .background(Color(uiColor: .systemGroupedBackground))
+            }
+            
+            // Banner Ad at bottom
+            GeometryReader { geo in
+                BannerAdView(width: geo.size.width)
+                    .frame(width: geo.size.width, height: 50, alignment: .center)
+                    .background(Color(uiColor: .tertiarySystemBackground))
+                    .overlay(alignment: .top) { Divider() }
+                    .ignoresSafeArea(edges: .bottom)
+                    .onAppear { availableWidth = geo.size.width }
+                    .onChange(of: geo.size.width) { newWidth in availableWidth = newWidth }
+            }
+            .frame(height: 50, alignment: .bottom)
         }
-        .background(Color(uiColor: .systemGroupedBackground))
     }
 }
 

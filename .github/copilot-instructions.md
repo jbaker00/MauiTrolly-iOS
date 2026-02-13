@@ -18,7 +18,7 @@ open MauiTrolly.xcodeproj
 xcodebuild -project MauiTrolly.xcodeproj -scheme MauiTrolly -destination 'platform=iOS Simulator,name=iPhone 15 Pro' build
 ```
 
-**Note:** No automated tests, linting, or package managers are currently configured.
+**Note:** No automated tests or linting are currently configured. GoogleMobileAds Swift package will be downloaded on first build.
 
 ## Architecture Overview
 
@@ -120,3 +120,22 @@ Services are stateless classes with static methods only:
 - Example: `TrolleyScheduleService.findTrolleys(...)`
 
 This ensures services can be called from anywhere without instantiation or dependency injection.
+
+## AdMob Integration
+
+**Banner ads are displayed at the bottom of SearchView using TEST ad units.**
+
+### Key Files:
+- `BannerAdView.swift` - UIViewRepresentable wrapper for GADBannerView
+- `ATTAuthorization.swift` - Handles App Tracking Transparency permission
+- Test ad units configured in `BannerAdView.swift` and `Info.plist`
+
+### Important Notes:
+- AdMob SDK initialized in `MauiTrollyApp.init()`
+- ATT permission requested when app becomes active
+- Banner is 50pt tall, uses GeometryReader for adaptive width
+- Currently using Google's test ad units (safe for development)
+- See `ADMOB_SETUP.md` for switching to production ad units
+
+### Banner Placement:
+SearchView wraps content in VStack with banner at bottom. The ScrollView contains the main content, and the banner sits below it in a GeometryReader for proper sizing.

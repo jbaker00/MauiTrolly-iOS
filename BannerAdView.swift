@@ -1,0 +1,43 @@
+//
+//  BannerAdView.swift
+//  MauiTrolly
+//
+//  Google AdMob Banner Ad View - TEST MODE
+//
+
+import SwiftUI
+import GoogleMobileAds
+
+/// Banner ad view that loads and displays AdMob ads
+struct BannerAdView: UIViewRepresentable {
+    var width: CGFloat = UIScreen.main.bounds.width
+    // Google AdMob TEST banner ad unit ID
+    let adUnitID: String = "ca-app-pub-3940256099942544/2934735716"
+    
+    func makeUIView(context: Context) -> BannerView {
+        let bannerView = BannerView(adSize: AdSizeBanner)
+        bannerView.adUnitID = adUnitID
+        bannerView.rootViewController = UIApplication.shared.firstKeyWindowRootViewController()
+        bannerView.load(Request())
+        return bannerView
+    }
+    
+    func updateUIView(_ uiView: BannerView, context: Context) {
+        // No-op: banner handles its own updates
+    }
+}
+
+// Helper to find a root view controller for presenting UIKit content
+private extension UIApplication {
+    func firstKeyWindowRootViewController() -> UIViewController? {
+        connectedScenes
+            .compactMap { ($0 as? UIWindowScene)?.keyWindow }
+            .first?
+            .rootViewController
+    }
+}
+
+// Convenience to get the current key window from a scene
+private extension UIWindowScene {
+    var keyWindow: UIWindow? { windows.first(where: { $0.isKeyWindow }) }
+}
