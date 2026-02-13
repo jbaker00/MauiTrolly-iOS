@@ -31,14 +31,10 @@ class BookingViewModel: ObservableObject {
     }
     
     func searchTrolleys() {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "h:mm a"
-        let timeString = formatter.string(from: desiredTime)
-        
         searchResults = TrolleyScheduleService.findTrolleys(
             from: fromStopId,
             to: toStopId,
-            desiredTime: timeString,
+            desiredTime: desiredTime,
             searchType: searchType
         )
         hasSearched = true

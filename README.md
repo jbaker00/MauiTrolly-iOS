@@ -21,7 +21,7 @@ A native iOS app for finding and booking rides on the free Kaanapali Trolley shu
 
 ## Requirements
 
-- iOS 15.0+
+- iOS 16.0+
 - Xcode 14.0+
 - Swift 5.7+
 
