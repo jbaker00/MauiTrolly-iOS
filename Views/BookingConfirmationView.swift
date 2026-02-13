@@ -60,7 +60,7 @@ struct BookingConfirmationView: View {
                                 VStack(alignment: .leading, spacing: 8) {
                                     Text(trip.departureTime)
                                         .font(.title2.bold())
-                                        .foregroundColor(Color(red: 0, green: 0.4, blue: 0.8))
+                                        .foregroundColor(.primary)
                                     
                                     Text(fromStop.name)
                                         .font(.headline)
@@ -86,7 +86,7 @@ struct BookingConfirmationView: View {
                                 VStack(alignment: .leading, spacing: 8) {
                                     Text(trip.arrivalTime)
                                         .font(.title2.bold())
-                                        .foregroundColor(Color(red: 1, green: 0.42, blue: 0.21))
+                                        .foregroundColor(.primary)
                                     
                                     Text(toStop.name)
                                         .font(.headline)
@@ -137,7 +137,7 @@ struct BookingConfirmationView: View {
                         }
                     }
                     .padding(24)
-                    .background(Color.white)
+                    .background(Color(uiColor: .systemBackground))
                     .cornerRadius(16)
                     .shadow(radius: 5)
                     
@@ -145,10 +145,10 @@ struct BookingConfirmationView: View {
                     VStack(alignment: .leading, spacing: 12) {
                         HStack {
                             Image(systemName: "info.circle.fill")
-                                .foregroundColor(Color(red: 0, green: 0.4, blue: 0.8))
+                                .foregroundColor(.accentColor)
                             Text("Important Reminders")
                                 .font(.headline)
-                                .foregroundColor(Color(red: 0, green: 0.4, blue: 0.8))
+                                .foregroundColor(.primary)
                         }
                         
                         ReminderRow(
@@ -165,19 +165,19 @@ struct BookingConfirmationView: View {
                         )
                     }
                     .padding()
-                    .background(Color(red: 1, green: 0.98, blue: 0.94))
+                    .background(Color(uiColor: .secondarySystemGroupedBackground))
                     .cornerRadius(12)
                     
                     Button(action: onBack) {
                         Text("Search Again")
                             .font(.headline)
-                            .foregroundColor(Color(red: 0, green: 0.4, blue: 0.8))
+                            .foregroundColor(.accentColor)
                             .frame(maxWidth: .infinity)
                             .padding()
-                            .background(Color.white)
+                            .background(Color(uiColor: .systemBackground))
                             .overlay(
                                 RoundedRectangle(cornerRadius: 12)
-                                    .stroke(Color(red: 0, green: 0.4, blue: 0.8), lineWidth: 2)
+                                    .stroke(Color.accentColor, lineWidth: 2)
                             )
                             .cornerRadius(12)
                     }
@@ -185,7 +185,7 @@ struct BookingConfirmationView: View {
                 .padding()
             }
         }
-        .background(Color(red: 0.96, green: 0.97, blue: 0.98))
+        .background(Color(uiColor: .systemGroupedBackground))
         .navigationBarBackButtonHidden(true)
     }
 }
@@ -198,11 +198,11 @@ struct ReminderRow: View {
         HStack(alignment: .top, spacing: 12) {
             Image(systemName: icon)
                 .font(.subheadline)
-                .foregroundColor(Color(red: 1, green: 0.42, blue: 0.21))
+                .foregroundColor(.orange)
             
             Text(text)
                 .font(.subheadline)
-                .foregroundColor(.secondary)
+                .foregroundColor(.primary)
         }
     }
 }

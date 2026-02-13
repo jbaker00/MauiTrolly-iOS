@@ -38,7 +38,7 @@ struct SearchView: View {
                     VStack(alignment: .leading, spacing: 20) {
                         Text("Plan Your Ride")
                             .font(.title2.bold())
-                            .foregroundColor(Color(red: 0, green: 0.4, blue: 0.8))
+                            .foregroundColor(.primary)
                         
                         // From/To Row
                         HStack(spacing: 12) {
@@ -121,7 +121,7 @@ struct SearchView: View {
                         }
                     }
                     .padding()
-                    .background(Color.white)
+                    .background(Color(uiColor: .systemBackground))
                     .cornerRadius(12)
                     .shadow(radius: 5)
                     
@@ -141,14 +141,14 @@ struct SearchView: View {
                             }
                             .padding(40)
                             .frame(maxWidth: .infinity)
-                            .background(Color.white)
+                            .background(Color(uiColor: .systemBackground))
                             .cornerRadius(12)
                             .shadow(radius: 5)
                         } else {
                             VStack(alignment: .leading, spacing: 12) {
                                 Text("Available Trolleys")
                                     .font(.title3.bold())
-                                    .foregroundColor(Color(red: 0, green: 0.4, blue: 0.8))
+                                    .foregroundColor(.primary)
                                     .padding(.horizontal)
                                 
                                 ForEach(viewModel.searchResults) { trip in
@@ -168,10 +168,10 @@ struct SearchView: View {
                         VStack(alignment: .leading, spacing: 12) {
                             HStack {
                                 Image(systemName: "info.circle.fill")
-                                    .foregroundColor(Color(red: 0, green: 0.4, blue: 0.8))
+                                    .foregroundColor(.accentColor)
                                 Text("About the Trolley")
                                     .font(.headline)
-                                    .foregroundColor(Color(red: 0, green: 0.4, blue: 0.8))
+                                    .foregroundColor(.primary)
                             }
                             
                             InfoRow(title: "Operating Hours:", value: "10:00 AM - 9:30 PM Daily")
@@ -180,7 +180,7 @@ struct SearchView: View {
                             InfoRow(title: "Phone:", value: "1-808-667-0648")
                         }
                         .padding()
-                        .background(Color.white)
+                        .background(Color(uiColor: .systemBackground))
                         .cornerRadius(12)
                         .shadow(radius: 5)
                     }
@@ -188,7 +188,7 @@ struct SearchView: View {
                 .padding()
             }
         }
-        .background(Color(red: 0.96, green: 0.97, blue: 0.98))
+        .background(Color(uiColor: .systemGroupedBackground))
     }
 }
 

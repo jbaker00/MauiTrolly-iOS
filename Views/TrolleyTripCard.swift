@@ -34,7 +34,7 @@ struct TrolleyTripCard: View {
                         
                         Text(trip.departureTime)
                             .font(.subheadline.bold())
-                            .foregroundColor(Color(red: 0, green: 0.4, blue: 0.8))
+                            .foregroundColor(.primary)
                     }
                     
                     // Duration
@@ -53,7 +53,7 @@ struct TrolleyTripCard: View {
                         
                         Text(trip.arrivalTime)
                             .font(.subheadline.bold())
-                            .foregroundColor(Color(red: 0, green: 0.4, blue: 0.8))
+                            .foregroundColor(.primary)
                         
                         AsyncImage(url: URL(string: toStop.imageURL)) { image in
                             image.resizable()
@@ -78,7 +78,7 @@ struct TrolleyTripCard: View {
                 }
             }
             .padding()
-            .background(Color.white)
+            .background(Color(uiColor: .systemBackground))
             .cornerRadius(12)
             .shadow(radius: 3)
             .overlay(
