@@ -38,6 +38,7 @@
 		527F24B973394C4AA0430210547B3E50 /* TrolleyStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrolleyStop.swift; sourceTree = "<group>"; };
 		6E7DAEF6F5944E3EB27B16F5D59FE803 /* BookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewModel.swift; sourceTree = "<group>"; };
 		6EB6211A2F4A57340071E552 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CC0001000000000000000000000000001 /* GoogleService-Info.plist.template */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist.template"; sourceTree = "<group>"; };
 		8109E64190FD4C98846EFA374DD28E54 /* MauiTrollyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MauiTrollyApp.swift; sourceTree = "<group>"; };
 		86A79F1CEA4A4F8892E021AFDACA77AF /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		A1B2C3D4E5F60001A1B2C3D4E5F60002 /* InterstitialAdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdCoordinator.swift; sourceTree = "<group>"; };
@@ -48,6 +49,27 @@
 		FB0001000000000000000000000000008 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
 		FB000100000000000000000000000000A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CC0001000000000000000000000000002 /* Generate GoogleService-Info.plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			inputFileListPaths = ();
+			inputPaths = (
+				"$(SRCROOT)/GoogleService-Info.plist.template",
+			);
+			name = "Generate GoogleService-Info.plist";
+			outputFileListPaths = ();
+			outputPaths = (
+				"$(SRCROOT)/GoogleService-Info.plist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Generate GoogleService-Info.plist from template if it does not exist.\n# For local builds: if the file already exists (gitignored), do nothing.\n# For CI builds: substitute FIREBASE_API_KEY env var into the template.\n\nTEMPLATE=\"$SRCROOT/GoogleService-Info.plist.template\"\nOUTPUT=\"$SRCROOT/GoogleService-Info.plist\"\n\nif [ -f \"$OUTPUT\" ]; then\n  echo \"GoogleService-Info.plist already exists — using local copy.\"\n  exit 0\nfi\n\nif [ -z \"$FIREBASE_API_KEY\" ]; then\n  echo \"error: GoogleService-Info.plist is missing and FIREBASE_API_KEY is not set.\"\n  echo \"error: For local builds, place GoogleService-Info.plist in the project root.\"\n  echo \"error: For CI, set FIREBASE_API_KEY in the environment or Xcode scheme.\"\n  exit 1\nfi\n\nsed \\\"s|\\${FIREBASE_API_KEY}|$FIREBASE_API_KEY|g\\\" \\\"$TEMPLATE\\\" > \\\"$OUTPUT\\\"\necho \\\"GoogleService-Info.plist generated from template.\\\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0DE41CBAC1B94E95B8A985D22A331149 /* Frameworks */ = {
@@ -117,7 +139,7 @@
 				100A647F72B04FC888D02596283A4288 /* ATTAuthorization.swift */,
 				ABC123DEF4567890ABC123DEF4567891 /* Assets.xcassets */,
 				0F38776949194530DFE63CBFA1F80F0 /* Info.plist */,
-				6EB6211A2F4A57340071E552 /* GoogleService-Info.plist */,
+				CC0001000000000000000000000000001 /* GoogleService-Info.plist.template */,
 				FB000100000000000000000000000000A /* PrivacyInfo.xcprivacy */,
 				0000000000000000000000000000002 /* Models */,
 				0000000000000000000000000000005 /* Views */,
@@ -134,6 +156,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0000000000000000000000000000009 /* Build configuration list for PBXNativeTarget "MauiTrolly" */;
 			buildPhases = (
+				CC0001000000000000000000000000002 /* Generate GoogleService-Info.plist */,
 				0000000000000000000000000000010 /* Sources */,
 				0DE41CBAC1B94E95B8A985D22A331149 /* Frameworks */,
 				0000000000000000000000000000011 /* Resources */,
