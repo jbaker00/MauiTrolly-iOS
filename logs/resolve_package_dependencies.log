@@ -1,0 +1,117 @@
+2026-02-21T23:06:29.704848507Z	Command line invocation:
+2026-02-21T23:06:29.705508370Z	    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -resolvePackageDependencies -project /Volumes/workspace/repository/MauiTrolly.xcodeproj -scheme MauiTrolly -derivedDataPath /Volumes/workspace/DerivedData -hideShellScriptEnvironment
+2026-02-21T23:06:29.705769195Z	
+2026-02-21T23:06:44.750469517Z	Resolve Package Graph
+2026-02-21T23:06:44.750681781Z	
+2026-02-21T23:06:44.751014659Z	Fetching from https://github.com/googleads/swift-package-manager-google-mobile-ads
+2026-02-21T23:07:05.427066748Z	
+2026-02-21T23:07:05.427486764Z	Fetching from https://github.com/google/abseil-cpp-binary.git
+2026-02-21T23:07:05.427956881Z	
+2026-02-21T23:07:05.428111563Z	Fetching from https://github.com/google/app-check.git
+2026-02-21T23:07:05.428255921Z	
+2026-02-21T23:07:05.428455857Z	Fetching from https://github.com/google/promises.git
+2026-02-21T23:07:05.428668346Z	
+2026-02-21T23:07:05.428903697Z	Fetching from https://github.com/google/GoogleAppMeasurement.git
+2026-02-21T23:07:05.428974270Z	
+2026-02-21T23:07:05.429039574Z	Fetching from https://github.com/google/interop-ios-for-google-sdks.git
+2026-02-21T23:07:05.429098962Z	
+2026-02-21T23:07:05.429204590Z	Fetching from https://github.com/google/gtm-session-fetcher.git
+2026-02-21T23:07:05.429280021Z	
+2026-02-21T23:07:05.429477469Z	Fetching from https://github.com/firebase/firebase-ios-sdk
+2026-02-21T23:07:05.429556865Z	
+2026-02-21T23:07:05.429721702Z	Fetching from https://github.com/firebase/leveldb.git
+2026-02-21T23:07:05.429790565Z	
+2026-02-21T23:07:05.429870220Z	Fetching from https://github.com/apple/swift-protobuf.git
+2026-02-21T23:07:05.429943545Z	
+2026-02-21T23:07:05.429984084Z	Fetching from https://github.com/google/GoogleUtilities.git
+2026-02-21T23:07:05.430045711Z	
+2026-02-21T23:07:05.430100599Z	Fetching from https://github.com/firebase/nanopb.git
+2026-02-21T23:07:05.430170356Z	
+2026-02-21T23:07:05.430326115Z	Fetching from https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git
+2026-02-21T23:07:05.430426933Z	
+2026-02-21T23:07:05.430673800Z	Fetching from https://github.com/google/GoogleDataTransport.git
+2026-02-21T23:07:05.430740281Z	
+2026-02-21T23:07:05.431059714Z	Fetching from https://github.com/google/grpc-binary.git
+2026-02-21T23:07:05.431219986Z	
+2026-02-21T23:07:05.431588736Z	Fetching from https://github.com/googleads/google-ads-on-device-conversion-ios-sdk
+2026-02-21T23:07:05.431804587Z	
+2026-02-21T23:07:05.432203019Z	Creating working copy of package ‘nanopb’
+2026-02-21T23:07:05.497066031Z	
+2026-02-21T23:07:05.497606668Z	Creating working copy of package ‘firebase-ios-sdk’
+2026-02-21T23:07:05.498022668Z	
+2026-02-21T23:07:05.498256610Z	Creating working copy of package ‘GoogleUtilities’
+2026-02-21T23:07:05.498580262Z	
+2026-02-21T23:07:05.498911426Z	Creating working copy of package ‘swift-protobuf’
+2026-02-21T23:07:05.499276625Z	
+2026-02-21T23:07:05.499370065Z	Creating working copy of package ‘app-check’
+2026-02-21T23:07:05.499660768Z	
+2026-02-21T23:07:05.499764481Z	Creating working copy of package ‘interop-ios-for-google-sdks’
+2026-02-21T23:07:05.499948327Z	
+2026-02-21T23:07:05.500007160Z	Creating working copy of package ‘swift-package-manager-google-mobile-ads’
+2026-02-21T23:07:05.500376082Z	
+2026-02-21T23:07:05.500476609Z	Checking out 101.0.0 of package ‘interop-ios-for-google-sdks’
+2026-02-21T23:07:05.500710224Z	
+2026-02-21T23:07:05.500956339Z	Creating working copy of package ‘swift-package-manager-google-user-messaging-platform’
+2026-02-21T23:07:05.501102887Z	
+2026-02-21T23:07:05.501443178Z	Checking out 3.1.0 of package ‘swift-package-manager-google-user-messaging-platform’
+2026-02-21T23:07:05.501594358Z	
+2026-02-21T23:07:05.501680408Z	Creating working copy of package ‘GoogleAppMeasurement’
+2026-02-21T23:07:05.501867443Z	
+2026-02-21T23:07:05.502014071Z	Checking out 11.15.0 of package ‘GoogleAppMeasurement’
+2026-02-21T23:07:05.502112391Z	
+2026-02-21T23:07:05.502271351Z	Creating working copy of package ‘GoogleDataTransport’
+2026-02-21T23:07:05.502450988Z	
+2026-02-21T23:07:05.502524564Z	Creating working copy of package ‘promises’
+2026-02-21T23:07:05.502636593Z	
+2026-02-21T23:07:05.502712535Z	Creating working copy of package ‘abseil-cpp-binary’
+2026-02-21T23:07:05.506113894Z	
+2026-02-21T23:07:05.506327857Z	Checking out 12.14.0 of package ‘swift-package-manager-google-mobile-ads’
+2026-02-21T23:07:05.506420490Z	
+2026-02-21T23:07:05.506761627Z	Checking out 1.35.0 of package ‘swift-protobuf’
+2026-02-21T23:07:32.553112751Z	
+2026-02-21T23:07:32.553716893Z	Checking out 11.2.0 of package ‘app-check’
+2026-02-21T23:07:32.553816179Z	
+2026-02-21T23:07:32.554258449Z	Creating working copy of package ‘gtm-session-fetcher’
+2026-02-21T23:07:32.554351436Z	
+2026-02-21T23:07:32.554557775Z	Creating working copy of package ‘leveldb’
+2026-02-21T23:07:32.554626487Z	
+2026-02-21T23:07:32.554848906Z	Checking out 10.1.0 of package ‘GoogleDataTransport’
+2026-02-21T23:07:32.554913667Z	
+2026-02-21T23:07:32.554984931Z	Checking out 1.2024072200.0 of package ‘abseil-cpp-binary’
+2026-02-21T23:07:32.555032632Z	
+2026-02-21T23:07:32.555180014Z	Checking out 2.4.0 of package ‘promises’
+2026-02-21T23:07:32.555369262Z	
+2026-02-21T23:07:32.555443610Z	Checking out 4.5.0 of package ‘gtm-session-fetcher’
+2026-02-21T23:07:32.555610792Z	
+2026-02-21T23:07:32.555682475Z	Creating working copy of package ‘grpc-binary’
+2026-02-21T23:07:32.555876481Z	
+2026-02-21T23:07:32.555947645Z	Checking out 2.30910.0 of package ‘nanopb’
+2026-02-21T23:07:32.556061312Z	
+2026-02-21T23:07:32.556169932Z	Checking out 8.1.0 of package ‘GoogleUtilities’
+2026-02-21T23:07:32.556366207Z	
+2026-02-21T23:07:32.556447265Z	Checking out 11.15.0 of package ‘firebase-ios-sdk’
+2026-02-21T23:07:32.556497446Z	
+2026-02-21T23:07:32.556583797Z	Creating working copy of package ‘google-ads-on-device-conversion-ios-sdk’
+2026-02-21T23:07:32.556626681Z	
+2026-02-21T23:07:32.556731442Z	Checking out 1.22.5 of package ‘leveldb’
+2026-02-21T23:07:32.556790629Z	
+2026-02-21T23:07:32.556874364Z	Checking out 1.69.1 of package ‘grpc-binary’
+2026-02-21T23:07:32.556915180Z	
+2026-02-21T23:07:32.556998703Z	Checking out 2.3.0 of package ‘google-ads-on-device-conversion-ios-sdk’
+2026-02-21T23:07:32.557109659Z	
+2026-02-21T23:08:17.384352571Z	failed downloading 'https://dl.google.com/firebase/ios/bin/grpc/1.69.1/rc0/grpc.zip' which is required by binary target 'grpc': downloadError("A server with the specified hostname could not be found.")failed downloading 'https://dl.google.com/firebase/ios/bin/grpc/1.69.1/rc0/grpcpp.zip' which is required by binary target 'grpcpp': downloadError("A server with the specified hostname could not be found.")failed downloading 'https://dl.google.com/googleadmobadssdk/c8c5523373ed76aa/googlemobileadsios-spm-12.14.0.zip' which is required by binary target 'GoogleMobileAds': downloadError("A server with the specified hostname could not be found.")failed downloading 'https://dl.google.com/firebase/ios/bin/abseil/1.2024072200.0/rc0/absl.zip' which is required by binary target 'absl': downloadError("A server with the specified hostname could not be found.")failed downloading 'https://dl.google.com/firebase/ios/bin/grpc/1.69.1/rc0/openssl_grpc.zip' which is required by binary target 'openssl_grpc': downloadError("A server with the specified hostname could not be found.")failed downloading 'https://dl.google.com/firebase/ios/swiftpm/11.15.0/FirebaseAnalytics.zip' which is required by binary target 'FirebaseAnalytics': downloadError("A server with the specified hostname could not be found.")failed downloading 'https://dl.google.com/firebase/ios/bin/firestore/11.14.0/rc0/FirebaseFirestoreInternal.zip' which is required by binary target 'FirebaseFirestoreInternal': downloadError("A server with the specified hostname could not be found.")failed downloading 'https://dl.google.com/firebase/ios/appads/2.3.0/GoogleAdsOnDeviceConversion.zip' which is required by binary target 'GoogleAdsOnDeviceConversion': downloadError("A server with the specified hostname could not be found.")failed downloading 'https://dl.google.com/firebase/ios/swiftpm/11.15.0/GoogleAppMeasurementIdentitySupport.zip' which is required by binary target 'GoogleAppMeasurementIdentitySupport': downloadError("A server with the specified hostname could not be found.")failed downloading 'https://dl.google.com/firebase/ios/swiftpm/11.15.0/GoogleAppMeasurement.zip' which is required by binary target 'GoogleAppMeasurement': downloadError("A server with the specified hostname could not be found.")failed downloading 'https://dl.google.com/firebase/ios/swiftpm/11.15.0/GoogleAppMeasurementOnDeviceConversion.zip' which is required by binary target 'GoogleAppMeasurementOnDeviceConversion': downloadError("A server with the specified hostname could not be found.")failed downloading 'https://dl.google.com/googleadmobadssdk/90fe6bf3b0f4ce0d/googleusermessagingplatformios-spm-3.1.0.zip' which is required by binary target 'UserMessagingPlatform': downloadError("A server with the specified hostname could not be found.")fatalError2026-02-21 15:08:17.211 xcodebuild[3058:14330] Writing error result bundle to /var/folders/6h/_32gb9js77g6c54h3q7g6q1h0000gn/T/ResultBundle_2026-21-02_15-08-0017.xcresult
+2026-02-21T23:08:17.384705171Z	xcodebuild: error: Could not resolve package dependencies:
+2026-02-21T23:08:17.385217500Z	  failed downloading 'https://dl.google.com/firebase/ios/bin/grpc/1.69.1/rc0/grpc.zip' which is required by binary target 'grpc': downloadError("A server with the specified hostname could not be found.")
+2026-02-21T23:08:17.385781573Z	  failed downloading 'https://dl.google.com/firebase/ios/bin/grpc/1.69.1/rc0/grpcpp.zip' which is required by binary target 'grpcpp': downloadError("A server with the specified hostname could not be found.")
+2026-02-21T23:08:17.385902227Z	  failed downloading 'https://dl.google.com/googleadmobadssdk/c8c5523373ed76aa/googlemobileadsios-spm-12.14.0.zip' which is required by binary target 'GoogleMobileAds': downloadError("A server with the specified hostname could not be found.")
+2026-02-21T23:08:17.386313515Z	  failed downloading 'https://dl.google.com/firebase/ios/bin/abseil/1.2024072200.0/rc0/absl.zip' which is required by binary target 'absl': downloadError("A server with the specified hostname could not be found.")
+2026-02-21T23:08:17.386464208Z	  failed downloading 'https://dl.google.com/firebase/ios/bin/grpc/1.69.1/rc0/openssl_grpc.zip' which is required by binary target 'openssl_grpc': downloadError("A server with the specified hostname could not be found.")
+2026-02-21T23:08:17.386617594Z	  failed downloading 'https://dl.google.com/firebase/ios/swiftpm/11.15.0/FirebaseAnalytics.zip' which is required by binary target 'FirebaseAnalytics': downloadError("A server with the specified hostname could not be found.")
+2026-02-21T23:08:17.386736919Z	  failed downloading 'https://dl.google.com/firebase/ios/bin/firestore/11.14.0/rc0/FirebaseFirestoreInternal.zip' which is required by binary target 'FirebaseFirestoreInternal': downloadError("A server with the specified hostname could not be found.")
+2026-02-21T23:08:17.386816018Z	  failed downloading 'https://dl.google.com/firebase/ios/appads/2.3.0/GoogleAdsOnDeviceConversion.zip' which is required by binary target 'GoogleAdsOnDeviceConversion': downloadError("A server with the specified hostname could not be found.")
+2026-02-21T23:08:17.389535295Z	  failed downloading 'https://dl.google.com/firebase/ios/swiftpm/11.15.0/GoogleAppMeasurementIdentitySupport.zip' which is required by binary target 'GoogleAppMeasurementIdentitySupport': downloadError("A server with the specified hostname could not be found.")
+2026-02-21T23:08:17.389626755Z	  failed downloading 'https://dl.google.com/firebase/ios/swiftpm/11.15.0/GoogleAppMeasurement.zip' which is required by binary target 'GoogleAppMeasurement': downloadError("A server with the specified hostname could not be found.")
+2026-02-21T23:08:17.389724252Z	  failed downloading 'https://dl.google.com/firebase/ios/swiftpm/11.15.0/GoogleAppMeasurementOnDeviceConversion.zip' which is required by binary target 'GoogleAppMeasurementOnDeviceConversion': downloadError("A server with the specified hostname could not be found.")
+2026-02-21T23:08:17.389805445Z	  failed downloading 'https://dl.google.com/googleadmobadssdk/90fe6bf3b0f4ce0d/googleusermessagingplatformios-spm-3.1.0.zip' which is required by binary target 'UserMessagingPlatform': downloadError("A server with the specified hostname could not be found.")
+2026-02-21T23:08:17.389844634Z	  fatalError
+2026-02-21T23:08:17.389928101Z	
