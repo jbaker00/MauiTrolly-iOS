@@ -2,7 +2,7 @@
 //  BannerAdView.swift
 //  MauiTrolly
 //
-//  Google AdMob Banner Ad View - TEST MODE
+//  Google AdMob Banner Ad View
 //
 
 import SwiftUI
@@ -11,8 +11,7 @@ import GoogleMobileAds
 /// Banner ad view that loads and displays AdMob ads
 struct BannerAdView: UIViewRepresentable {
     var width: CGFloat = UIScreen.main.bounds.width
-    // Google AdMob TEST banner ad unit ID
-    let adUnitID: String = "ca-app-pub-3940256099942544/2934735716"
+    let adUnitID: String = "ca-app-pub-7871017136061682/6804526856"
     
     func makeUIView(context: Context) -> BannerView {
         let bannerView = BannerView(adSize: AdSizeBanner)

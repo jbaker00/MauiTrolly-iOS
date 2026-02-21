@@ -3,9 +3,9 @@
 ## Overview
 This app now includes Google AdMob banner ads using **TEST AD UNITS**. The integration follows the same pattern used in CreoleTranslator-ios.
 
-## Test Ad Units Used
-- **App ID**: `ca-app-pub-3940256099942544~1458002511` (Google's test app ID)
-- **Banner Ad Unit**: `ca-app-pub-3940256099942544/2934735716` (Google's test banner ID)
+## Production Ad Units
+- **App ID**: `ca-app-pub-7871017136061682~1113336611`
+- **Banner Ad Unit**: `ca-app-pub-7871017136061682/6804526856`
 
 ## Files Added
 1. **BannerAdView.swift** - UIViewRepresentable wrapper for GADBannerView
