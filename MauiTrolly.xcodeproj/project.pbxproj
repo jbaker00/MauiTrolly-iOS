@@ -10,14 +10,19 @@
 		00F5CD6D47C44F2AAA5C4C596AE97359 /* TrolleyTripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F5CD6D47C44F2AAA5C4C596AE97360 /* TrolleyTripCard.swift */; };
 		100A647F72B04FC888D02596283A4287 /* ATTAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100A647F72B04FC888D02596283A4288 /* ATTAuthorization.swift */; };
 		16F9DD6D3E1143519F7B960C3843CE53 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F9DD6D3E1143519F7B960C3843CE54 /* BannerAdView.swift */; };
-		A1B2C3D4E5F60001A1B2C3D4E5F60001 /* InterstitialAdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60001A1B2C3D4E5F60002 /* InterstitialAdCoordinator.swift */; };
 		3AE56DC75A3D42DAB64612432B9165F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56DC75A3D42DAB64612432B9165F9 /* ContentView.swift */; };
 		527F24B973394C4AA0430210547B3E49 /* TrolleyStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F24B973394C4AA0430210547B3E50 /* TrolleyStop.swift */; };
 		6E7DAEF6F5944E3EB27B16F5D59FE802 /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DAEF6F5944E3EB27B16F5D59FE803 /* BookingViewModel.swift */; };
 		8109E64190FD4C98846EFA374DD28E53 /* MauiTrollyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8109E64190FD4C98846EFA374DD28E54 /* MauiTrollyApp.swift */; };
 		86A79F1CEA4A4F8892E021AFDACA77AE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A79F1CEA4A4F8892E021AFDACA77AF /* SearchView.swift */; };
+		A1B2C3D4E5F60001A1B2C3D4E5F60001 /* InterstitialAdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60001A1B2C3D4E5F60002 /* InterstitialAdCoordinator.swift */; };
 		ABC123DEF4567890ABC123DEF4567890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABC123DEF4567890ABC123DEF4567891 /* Assets.xcassets */; };
 		B8232442183218D6783B855379D502E72 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = B8232442183218D6783B855379D502E73 /* GoogleMobileAds */; };
+		FB0001000000000000000000000000001 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FB0001000000000000000000000000002 /* FirebaseAnalytics */; };
+		FB0001000000000000000000000000003 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FB0001000000000000000000000000004 /* FirebaseCrashlytics */; };
+		FB0001000000000000000000000000005 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB0001000000000000000000000000006 /* GoogleService-Info.plist */; };
+		FB0001000000000000000000000000007 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0001000000000000000000000000008 /* AnalyticsService.swift */; };
+		FB0001000000000000000000000000009 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = FB000100000000000000000000000000A /* PrivacyInfo.xcprivacy */; };
 		C053D448E10B4EF1A6BCB93FB6004782 /* TrolleyTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053D448E10B4EF1A6BCB93FB6004783 /* TrolleyTrip.swift */; };
 		E01F672BD37B402E8507BE6B37FA12A4 /* BookingConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F672BD37B402E8507BE6B37FA12A5 /* BookingConfirmationView.swift */; };
 		E424ABE839BF44F7B1F802CD083D015C /* TrolleyScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E424ABE839BF44F7B1F802CD083D015D /* TrolleyScheduleService.swift */; };
@@ -28,17 +33,20 @@
 		0F38776949194530DFE63CBFA1F80F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		100A647F72B04FC888D02596283A4288 /* ATTAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTAuthorization.swift; sourceTree = "<group>"; };
 		16F9DD6D3E1143519F7B960C3843CE54 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
-		A1B2C3D4E5F60001A1B2C3D4E5F60002 /* InterstitialAdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdCoordinator.swift; sourceTree = "<group>"; };
 		1EA5AF1D252B4C0FAD95CDAB28D7E0B1 /* MauiTrolly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MauiTrolly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE56DC75A3D42DAB64612432B9165F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		527F24B973394C4AA0430210547B3E50 /* TrolleyStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrolleyStop.swift; sourceTree = "<group>"; };
 		6E7DAEF6F5944E3EB27B16F5D59FE803 /* BookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewModel.swift; sourceTree = "<group>"; };
 		8109E64190FD4C98846EFA374DD28E54 /* MauiTrollyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MauiTrollyApp.swift; sourceTree = "<group>"; };
 		86A79F1CEA4A4F8892E021AFDACA77AF /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		A1B2C3D4E5F60001A1B2C3D4E5F60002 /* InterstitialAdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdCoordinator.swift; sourceTree = "<group>"; };
 		ABC123DEF4567890ABC123DEF4567891 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C053D448E10B4EF1A6BCB93FB6004783 /* TrolleyTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrolleyTrip.swift; sourceTree = "<group>"; };
 		E01F672BD37B402E8507BE6B37FA12A5 /* BookingConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingConfirmationView.swift; sourceTree = "<group>"; };
 		E424ABE839BF44F7B1F802CD083D015D /* TrolleyScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrolleyScheduleService.swift; sourceTree = "<group>"; };
+		FB0001000000000000000000000000006 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FB0001000000000000000000000000008 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
+		FB000100000000000000000000000000A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,28 +55,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8232442183218D6783B855379D502E72 /* GoogleMobileAds in Frameworks */,
+				FB0001000000000000000000000000001 /* FirebaseAnalytics in Frameworks */,
+				FB0001000000000000000000000000003 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0000000000000000000000000000001 = {
-			isa = PBXGroup;
-			children = (
-				8109E64190FD4C98846EFA374DD28E54 /* MauiTrollyApp.swift */,
-				16F9DD6D3E1143519F7B960C3843CE54 /* BannerAdView.swift */,
-				A1B2C3D4E5F60001A1B2C3D4E5F60002 /* InterstitialAdCoordinator.swift */,
-				100A647F72B04FC888D02596283A4288 /* ATTAuthorization.swift */,
-				0000000000000000000000000000002 /* Models */,
-				0000000000000000000000000000003 /* Services */,
-				0000000000000000000000000000004 /* ViewModels */,
-				0000000000000000000000000000005 /* Views */,
-				ABC123DEF4567890ABC123DEF4567891 /* Assets.xcassets */,
-				0F38776949194530DFE63CBFA1F80F0 /* Info.plist */,
-			);
-			sourceTree = "<group>";
-		};
 		0000000000000000000000000000002 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,7 +110,19 @@
 		0000000000000000000000000000007 = {
 			isa = PBXGroup;
 			children = (
-				0000000000000000000000000000001,
+				8109E64190FD4C98846EFA374DD28E54 /* MauiTrollyApp.swift */,
+				16F9DD6D3E1143519F7B960C3843CE54 /* BannerAdView.swift */,
+				A1B2C3D4E5F60001A1B2C3D4E5F60002 /* InterstitialAdCoordinator.swift */,
+				FB0001000000000000000000000000008 /* AnalyticsService.swift */,
+				100A647F72B04FC888D02596283A4288 /* ATTAuthorization.swift */,
+				ABC123DEF4567890ABC123DEF4567891 /* Assets.xcassets */,
+				0F38776949194530DFE63CBFA1F80F0 /* Info.plist */,
+				FB0001000000000000000000000000006 /* GoogleService-Info.plist */,
+				FB000100000000000000000000000000A /* PrivacyInfo.xcprivacy */,
+				0000000000000000000000000000002 /* Models */,
+				0000000000000000000000000000005 /* Views */,
+				0000000000000000000000000000004 /* ViewModels */,
+				0000000000000000000000000000003 /* Services */,
 				0000000000000000000000000000006 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -167,6 +173,7 @@
 			mainGroup = 0000000000000000000000000000007;
 			packageReferences = (
 				68A6A5AEFF7045688A66416C9F747D86D /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				FB000100000000000000000000000000B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 0000000000000000000000000000006 /* Products */;
 			projectDirPath = "";
@@ -183,6 +190,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABC123DEF4567890ABC123DEF4567890 /* Assets.xcassets in Resources */,
+				FB0001000000000000000000000000005 /* GoogleService-Info.plist in Resources */,
+				FB0001000000000000000000000000009 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +214,7 @@
 				16F9DD6D3E1143519F7B960C3843CE53 /* BannerAdView.swift in Sources */,
 				A1B2C3D4E5F60001A1B2C3D4E5F60001 /* InterstitialAdCoordinator.swift in Sources */,
 				100A647F72B04FC888D02596283A4287 /* ATTAuthorization.swift in Sources */,
+				FB0001000000000000000000000000007 /* AnalyticsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +431,14 @@
 				minimumVersion = 12.14.0;
 			};
 		};
+		FB000100000000000000000000000000B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -428,6 +446,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 68A6A5AEFF7045688A66416C9F747D86D /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
 			productName = GoogleMobileAds;
+		};
+		FB0001000000000000000000000000002 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB000100000000000000000000000000B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		FB0001000000000000000000000000004 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB000100000000000000000000000000B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

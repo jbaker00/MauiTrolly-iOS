@@ -187,6 +187,12 @@ struct BookingConfirmationView: View {
             .frame(height: 50)
         }
         .navigationBarBackButtonHidden(true)
+        .onAppear {
+            AnalyticsService.logViewRideDetails(
+                from: fromStop.shortName,
+                to: toStop.shortName
+            )
+        }
     }
 }
 

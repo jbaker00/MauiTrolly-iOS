@@ -105,6 +105,18 @@ struct SearchView: View {
                             // Search button
                             Button(action: {
                                 viewModel.searchTrolleys()
+                                AnalyticsService.logSearch(
+                                    from: viewModel.fromStop.shortName,
+                                    to: viewModel.toStop.shortName,
+                                    searchType: viewModel.searchType == .departure ? "departure" : "arrival"
+                                )
+                                if viewModel.searchResults.isEmpty {
+                                    AnalyticsService.logSearchNoResults(
+                                        from: viewModel.fromStop.shortName,
+                                        to: viewModel.toStop.shortName,
+                                        searchType: viewModel.searchType == .departure ? "departure" : "arrival"
+                                    )
+                                }
                                 interstitialAd.showAd()
                             }) {
                                 HStack {

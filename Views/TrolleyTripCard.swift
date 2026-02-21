@@ -79,7 +79,13 @@ struct TrolleyTripCard: View {
                     .padding(.horizontal, 20)
 
                 // ── Select button (HIG: filled prominent button) ──────
-                Button(action: onSelect) {
+                Button(action: {
+                    AnalyticsService.logSelectTrip(
+                        departureTime: trip.departureTime,
+                        isBestMatch: trip.isBest
+                    )
+                    onSelect()
+                }) {
                     Text("View Ride Details")
                         .font(.subheadline.bold())
                         .foregroundColor(.white)
