@@ -78,18 +78,19 @@ struct TrolleyTripCard: View {
                 Divider()
                     .padding(.horizontal, 20)
 
-                // ── Select button ─────────────────────────────────────
+                // ── Select button (HIG: filled prominent button) ──────
                 Button(action: onSelect) {
-                    HStack {
-                        Image(systemName: "checkmark.circle")
-                        Text("Select This Trolley")
-                            .font(.subheadline.bold())
-                    }
-                    .foregroundColor(primaryBlue)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 14)
+                    Text("View Ride Details")
+                        .font(.subheadline.bold())
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 13)
+                        .background(primaryBlue)
+                        .cornerRadius(10)
                 }
-                .padding(.horizontal, 20)
+                .buttonStyle(.plain)
+                .padding(.horizontal, 16)
+                .padding(.bottom, 16)
             }
             .background(Color(uiColor: .systemBackground))
             .cornerRadius(16)

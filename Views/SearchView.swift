@@ -17,16 +17,21 @@ struct SearchView: View {
             ScrollView {
                 VStack(spacing: 0) {
                     // ── Header ──────────────────────────────────────────
-                    VStack(spacing: 6) {
-                        Text("🚃 Kaanapali Trolley")
-                            .font(.system(size: 26, weight: .bold, design: .rounded))
-                            .foregroundColor(.white)
-                        Text("Free Resort Shuttle · Kaanapali, Maui")
-                            .font(.subheadline)
-                            .foregroundColor(.white.opacity(0.85))
+                    HStack(spacing: 10) {
+                        Text("🚃")
+                            .font(.title3)
+                        VStack(alignment: .leading, spacing: 1) {
+                            Text("Kaanapali Trolley")
+                                .font(.headline.bold())
+                                .foregroundColor(.white)
+                            Text("Free Resort Shuttle · Kaanapali, Maui")
+                                .font(.caption)
+                                .foregroundColor(.white.opacity(0.85))
+                        }
                     }
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 28)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 12)
                     .background(
                         LinearGradient(colors: [primaryBlue, darkBlue],
                                        startPoint: .topLeading, endPoint: .bottomTrailing)
