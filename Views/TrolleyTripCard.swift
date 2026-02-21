@@ -2,102 +2,119 @@
 //  TrolleyTripCard.swift
 //  MauiTrolly
 //
-//  Created by GitHub Copilot on 2/12/26.
-//
 
 import SwiftUI
+
+private let primaryBlue  = Color(red: 0, green: 0.4, blue: 0.8)
+private let accentOrange = Color(red: 1, green: 0.42, blue: 0.21)
 
 struct TrolleyTripCard: View {
     let trip: TrolleyTrip
     let fromStop: TrolleyStop
     let toStop: TrolleyStop
     let onSelect: () -> Void
-    
+
     var body: some View {
         ZStack(alignment: .top) {
-            VStack(spacing: 16) {
-                HStack(alignment: .center, spacing: 12) {
+            VStack(spacing: 0) {
+                // ── Route timeline ────────────────────────────────────
+                HStack(alignment: .center, spacing: 0) {
+
                     // Departure
-                    VStack(spacing: 8) {
-                        AsyncImage(url: URL(string: fromStop.imageURL)) { image in
-                            image.resizable()
-                                .aspectRatio(contentMode: .fill)
-                        } placeholder: {
-                            Color.gray.opacity(0.2)
-                        }
-                        .frame(width: 60, height: 60)
-                        .cornerRadius(8)
-                        
-                        Text("DEPART")
-                            .font(.caption2.bold())
-                            .foregroundColor(.secondary)
-                        
+                    VStack(alignment: .leading, spacing: 4) {
                         Text(trip.departureTime)
-                            .font(.subheadline.bold())
+                            .font(.system(size: 22, weight: .bold, design: .rounded))
                             .foregroundColor(.primary)
+                        Text(fromStop.shortName)
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                            .lineLimit(2)
                     }
-                    
-                    // Duration
-                    VStack {
+                    .frame(maxWidth: .infinity, alignment: .leading)
+
+                    // Duration line
+                    VStack(spacing: 4) {
                         Text("\(trip.travelTime) min")
                             .font(.caption.bold())
                             .foregroundColor(.secondary)
-                    }
-                    .padding(.horizontal, 8)
-                    
-                    // Arrival
-                    VStack(spacing: 8) {
-                        Text("ARRIVE")
-                            .font(.caption2.bold())
-                            .foregroundColor(.secondary)
-                        
-                        Text(trip.arrivalTime)
-                            .font(.subheadline.bold())
-                            .foregroundColor(.primary)
-                        
-                        AsyncImage(url: URL(string: toStop.imageURL)) { image in
-                            image.resizable()
-                                .aspectRatio(contentMode: .fill)
-                        } placeholder: {
-                            Color.gray.opacity(0.2)
+                        HStack(spacing: 0) {
+                            Circle()
+                                .fill(primaryBlue)
+                                .frame(width: 8, height: 8)
+                            Rectangle()
+                                .fill(Color.gray.opacity(0.4))
+                                .frame(height: 2)
+                            Image(systemName: "tram.fill")
+                                .font(.caption)
+                                .foregroundColor(primaryBlue)
+                            Rectangle()
+                                .fill(Color.gray.opacity(0.4))
+                                .frame(height: 2)
+                            Circle()
+                                .fill(accentOrange)
+                                .frame(width: 8, height: 8)
                         }
-                        .frame(width: 60, height: 60)
-                        .cornerRadius(8)
                     }
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal, 8)
+
+                    // Arrival
+                    VStack(alignment: .trailing, spacing: 4) {
+                        Text(trip.arrivalTime)
+                            .font(.system(size: 22, weight: .bold, design: .rounded))
+                            .foregroundColor(.primary)
+                        Text(toStop.shortName)
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                            .lineLimit(2)
+                            .multilineTextAlignment(.trailing)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .trailing)
                 }
-                .padding(.top, trip.isBest ? 12 : 0)
-                
+                .padding(.horizontal, 20)
+                .padding(.top, trip.isBest ? 28 : 20)
+                .padding(.bottom, 16)
+
+                Divider()
+                    .padding(.horizontal, 20)
+
+                // ── Select button ─────────────────────────────────────
                 Button(action: onSelect) {
-                    Text("Select This Trolley")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color(red: 0, green: 0.4, blue: 0.8))
-                        .cornerRadius(8)
+                    HStack {
+                        Image(systemName: "checkmark.circle")
+                        Text("Select This Trolley")
+                            .font(.subheadline.bold())
+                    }
+                    .foregroundColor(primaryBlue)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 14)
                 }
+                .padding(.horizontal, 20)
             }
-            .padding()
             .background(Color(uiColor: .systemBackground))
-            .cornerRadius(12)
-            .shadow(radius: 3)
-            .overlay(
-                RoundedRectangle(cornerRadius: 12)
-                    .stroke(trip.isBest ? Color(red: 1, green: 0.42, blue: 0.21) : Color.clear, lineWidth: 2)
+            .cornerRadius(16)
+            .shadow(
+                color: trip.isBest ? primaryBlue.opacity(0.2) : .black.opacity(0.06),
+                radius: trip.isBest ? 10 : 6,
+                x: 0, y: 2
             )
-            
+            .overlay(
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(trip.isBest ? accentOrange : Color.clear, lineWidth: 2)
+            )
+
+            // ── Best Match badge ──────────────────────────────────────
             if trip.isBest {
-                Text("✨ Best Match")
+                Text("⭐ Best Match")
                     .font(.caption.bold())
                     .foregroundColor(.white)
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 6)
-                    .background(Color(red: 1, green: 0.42, blue: 0.21))
-                    .cornerRadius(20)
-                    .offset(y: -12)
+                    .padding(.horizontal, 14)
+                    .padding(.vertical, 5)
+                    .background(accentOrange)
+                    .clipShape(Capsule())
+                    .offset(y: -10)
             }
         }
-        .padding(.horizontal)
-        .padding(.vertical, trip.isBest ? 8 : 4)
+        .padding(.top, trip.isBest ? 10 : 0)
     }
 }
