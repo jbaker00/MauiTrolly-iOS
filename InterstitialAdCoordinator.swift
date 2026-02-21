@@ -16,7 +16,7 @@ class InterstitialAdCoordinator: NSObject, ObservableObject, FullScreenContentDe
     }
 
     func loadAd() {
-        InterstitialAd.load(withAdUnitID: adUnitID, request: Request()) { [weak self] ad, _ in
+        InterstitialAd.load(with: adUnitID, request: Request()) { [weak self] ad, _ in
             self?.interstitial = ad
             self?.interstitial?.fullScreenContentDelegate = self
         }
@@ -29,7 +29,7 @@ class InterstitialAdCoordinator: NSObject, ObservableObject, FullScreenContentDe
                 .first?
                 .rootViewController
         else { return }
-        interstitial.present(fromRootViewController: rootVC)
+        interstitial.present(from: rootVC)
     }
 
     // Preload the next ad after dismissal
