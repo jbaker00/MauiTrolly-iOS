@@ -10,6 +10,7 @@
 		00F5CD6D47C44F2AAA5C4C596AE97359 /* TrolleyTripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F5CD6D47C44F2AAA5C4C596AE97360 /* TrolleyTripCard.swift */; };
 		100A647F72B04FC888D02596283A4287 /* ATTAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100A647F72B04FC888D02596283A4288 /* ATTAuthorization.swift */; };
 		16F9DD6D3E1143519F7B960C3843CE53 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F9DD6D3E1143519F7B960C3843CE54 /* BannerAdView.swift */; };
+		A1B2C3D4E5F60001A1B2C3D4E5F60001 /* InterstitialAdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60001A1B2C3D4E5F60002 /* InterstitialAdCoordinator.swift */; };
 		3AE56DC75A3D42DAB64612432B9165F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE56DC75A3D42DAB64612432B9165F9 /* ContentView.swift */; };
 		527F24B973394C4AA0430210547B3E49 /* TrolleyStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F24B973394C4AA0430210547B3E50 /* TrolleyStop.swift */; };
 		6E7DAEF6F5944E3EB27B16F5D59FE802 /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7DAEF6F5944E3EB27B16F5D59FE803 /* BookingViewModel.swift */; };
@@ -27,6 +28,7 @@
 		0F38776949194530DFE63CBFA1F80F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		100A647F72B04FC888D02596283A4288 /* ATTAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATTAuthorization.swift; sourceTree = "<group>"; };
 		16F9DD6D3E1143519F7B960C3843CE54 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
+		A1B2C3D4E5F60001A1B2C3D4E5F60002 /* InterstitialAdCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdCoordinator.swift; sourceTree = "<group>"; };
 		1EA5AF1D252B4C0FAD95CDAB28D7E0B1 /* MauiTrolly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MauiTrolly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE56DC75A3D42DAB64612432B9165F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		527F24B973394C4AA0430210547B3E50 /* TrolleyStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrolleyStop.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				8109E64190FD4C98846EFA374DD28E54 /* MauiTrollyApp.swift */,
 				16F9DD6D3E1143519F7B960C3843CE54 /* BannerAdView.swift */,
+				A1B2C3D4E5F60001A1B2C3D4E5F60002 /* InterstitialAdCoordinator.swift */,
 				100A647F72B04FC888D02596283A4288 /* ATTAuthorization.swift */,
 				0000000000000000000000000000002 /* Models */,
 				0000000000000000000000000000003 /* Services */,
@@ -200,6 +203,7 @@
 				86A79F1CEA4A4F8892E021AFDACA77AE /* SearchView.swift in Sources */,
 				00F5CD6D47C44F2AAA5C4C596AE97359 /* TrolleyTripCard.swift in Sources */,
 				16F9DD6D3E1143519F7B960C3843CE53 /* BannerAdView.swift in Sources */,
+				A1B2C3D4E5F60001A1B2C3D4E5F60001 /* InterstitialAdCoordinator.swift in Sources */,
 				100A647F72B04FC888D02596283A4287 /* ATTAuthorization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

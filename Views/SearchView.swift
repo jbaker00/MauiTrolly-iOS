@@ -11,6 +11,7 @@ private let accentOrange = Color(red: 1, green: 0.42, blue: 0.21)
 
 struct SearchView: View {
     @ObservedObject var viewModel: BookingViewModel
+    @StateObject private var interstitialAd = InterstitialAdCoordinator()
 
     var body: some View {
         VStack(spacing: 0) {
@@ -102,7 +103,10 @@ struct SearchView: View {
                             }
 
                             // Search button
-                            Button(action: viewModel.searchTrolleys) {
+                            Button(action: {
+                                viewModel.searchTrolleys()
+                                interstitialAd.showAd()
+                            }) {
                                 HStack {
                                     Image(systemName: "magnifyingglass")
                                     Text("Find Trolleys")
