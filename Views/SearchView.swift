@@ -117,7 +117,6 @@ struct SearchView: View {
                                         searchType: viewModel.searchType == .departure ? "departure" : "arrival"
                                     )
                                 }
-                                interstitialAd.showAd()
                             }) {
                                 HStack {
                                     Image(systemName: "magnifyingglass")
@@ -175,7 +174,10 @@ struct SearchView: View {
                                             trip: trip,
                                             fromStop: viewModel.fromStop,
                                             toStop: viewModel.toStop,
-                                            onSelect: { viewModel.selectedTrip = trip }
+                                            onSelect: {
+                                                viewModel.selectedTrip = trip
+                                                interstitialAd.showAd()
+                                            }
                                         )
                                     }
                                 }
