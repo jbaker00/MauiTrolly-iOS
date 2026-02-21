@@ -18,14 +18,14 @@
 		A1B2C3D4E5F60001A1B2C3D4E5F60001 /* InterstitialAdCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60001A1B2C3D4E5F60002 /* InterstitialAdCoordinator.swift */; };
 		ABC123DEF4567890ABC123DEF4567890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABC123DEF4567890ABC123DEF4567891 /* Assets.xcassets */; };
 		B8232442183218D6783B855379D502E72 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = B8232442183218D6783B855379D502E73 /* GoogleMobileAds */; };
+		C053D448E10B4EF1A6BCB93FB6004782 /* TrolleyTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053D448E10B4EF1A6BCB93FB6004783 /* TrolleyTrip.swift */; };
+		E01F672BD37B402E8507BE6B37FA12A4 /* BookingConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F672BD37B402E8507BE6B37FA12A5 /* BookingConfirmationView.swift */; };
+		E424ABE839BF44F7B1F802CD083D015C /* TrolleyScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E424ABE839BF44F7B1F802CD083D015D /* TrolleyScheduleService.swift */; };
 		FB0001000000000000000000000000001 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FB0001000000000000000000000000002 /* FirebaseAnalytics */; };
 		FB0001000000000000000000000000003 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FB0001000000000000000000000000004 /* FirebaseCrashlytics */; };
 		FB0001000000000000000000000000005 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB0001000000000000000000000000006 /* GoogleService-Info.plist */; };
 		FB0001000000000000000000000000007 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0001000000000000000000000000008 /* AnalyticsService.swift */; };
 		FB0001000000000000000000000000009 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = FB000100000000000000000000000000A /* PrivacyInfo.xcprivacy */; };
-		C053D448E10B4EF1A6BCB93FB6004782 /* TrolleyTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C053D448E10B4EF1A6BCB93FB6004783 /* TrolleyTrip.swift */; };
-		E01F672BD37B402E8507BE6B37FA12A4 /* BookingConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01F672BD37B402E8507BE6B37FA12A5 /* BookingConfirmationView.swift */; };
-		E424ABE839BF44F7B1F802CD083D015C /* TrolleyScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E424ABE839BF44F7B1F802CD083D015D /* TrolleyScheduleService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -361,7 +361,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mauiTrolly.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -390,7 +390,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mauiTrolly.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
