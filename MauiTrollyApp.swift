@@ -3,7 +3,7 @@
 //  MauiTrolly
 //
 
-import SwiftUI
+import SwiftUI 
 import GoogleMobileAds
 import FirebaseCore
 
