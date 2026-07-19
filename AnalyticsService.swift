@@ -15,16 +15,21 @@ enum AnalyticsService {
         static let selectTrip       = "select_trip"
         static let viewRideDetails  = "view_ride_details"
         static let searchNoResults  = "search_no_results"
+        static let swapStops        = "swap_stops"
+        static let changeStop       = "change_stop"
+        static let changeSearchType = "change_search_type"
+        static let searchAgain      = "search_again"
     }
 
     // MARK: - Public API
 
     /// Logged when the user taps "Find Trolleys"
-    static func logSearch(from fromStop: String, to toStop: String, searchType: String) {
+    static func logSearch(from fromStop: String, to toStop: String, searchType: String, resultCount: Int) {
         Analytics.logEvent(Event.searchTrolley, parameters: [
             "from_stop": fromStop,
             "to_stop": toStop,
             "search_type": searchType,
+            "result_count": resultCount,
         ])
     }
 
@@ -50,6 +55,37 @@ enum AnalyticsService {
             "from_stop": fromStop,
             "to_stop": toStop,
             "search_type": searchType,
+        ])
+    }
+
+    /// Logged when the user taps the swap (from ⇄ to) button
+    static func logSwapStops(from fromStop: String, to toStop: String) {
+        Analytics.logEvent(Event.swapStops, parameters: [
+            "from_stop": fromStop,
+            "to_stop": toStop,
+        ])
+    }
+
+    /// Logged when the user picks a different stop in the FROM/TO menu
+    static func logChangeStop(field: String, stop: String) {
+        Analytics.logEvent(Event.changeStop, parameters: [
+            "field": field,     // "from" | "to"
+            "stop": stop,
+        ])
+    }
+
+    /// Logged when the user flips the Depart/Arrive segmented control
+    static func logChangeSearchType(_ searchType: String) {
+        Analytics.logEvent(Event.changeSearchType, parameters: [
+            "search_type": searchType,
+        ])
+    }
+
+    /// Logged when the user taps "Search Again" on the ride summary screen
+    static func logSearchAgain(from fromStop: String, to toStop: String) {
+        Analytics.logEvent(Event.searchAgain, parameters: [
+            "from_stop": fromStop,
+            "to_stop": toStop,
         ])
     }
 }

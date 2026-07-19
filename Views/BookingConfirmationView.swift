@@ -157,7 +157,13 @@ struct BookingConfirmationView: View {
                         .background(Color(uiColor: .secondarySystemGroupedBackground))
                         .cornerRadius(12)
 
-                        Button(action: onBack) {
+                        Button(action: {
+                            AnalyticsService.logSearchAgain(
+                                from: fromStop.shortName,
+                                to: toStop.shortName
+                            )
+                            onBack()
+                        }) {
                             Text("Search Again")
                                 .font(.headline)
                                 .foregroundColor(.accentColor)

@@ -66,7 +66,13 @@ struct SearchView: View {
                                 .frame(maxWidth: .infinity)
 
                                 // Swap button
-                                Button(action: viewModel.swapLocations) {
+                                Button(action: {
+                                    viewModel.swapLocations()
+                                    AnalyticsService.logSwapStops(
+                                        from: viewModel.fromStop.shortName,
+                                        to: viewModel.toStop.shortName
+                                    )
+                                }) {
                                     Image(systemName: "arrow.up.arrow.down.circle.fill")
                                         .font(.system(size: 28))
                                         .foregroundColor(primaryBlue.opacity(0.8))
@@ -99,6 +105,11 @@ struct SearchView: View {
                                     }
                                     .pickerStyle(.segmented)
                                     .frame(width: 150)
+                                    .onChange(of: viewModel.searchType) { newType in
+                                        AnalyticsService.logChangeSearchType(
+                                            newType == .departure ? "departure" : "arrival"
+                                        )
+                                    }
                                 }
                             }
 
@@ -108,7 +119,8 @@ struct SearchView: View {
                                 AnalyticsService.logSearch(
                                     from: viewModel.fromStop.shortName,
                                     to: viewModel.toStop.shortName,
-                                    searchType: viewModel.searchType == .departure ? "departure" : "arrival"
+                                    searchType: viewModel.searchType == .departure ? "departure" : "arrival",
+                                    resultCount: viewModel.searchResults.count
                                 )
                                 if viewModel.searchResults.isEmpty {
                                     AnalyticsService.logSearchNoResults(
@@ -224,6 +236,14 @@ private struct StopPickerRow: View {
             }
             .pickerStyle(.menu)
             .tint(Color(red: 0, green: 0.4, blue: 0.8))
+            .onChange(of: stopId) { newId in
+                if let stop = TrolleyStop.allStops.first(where: { $0.id == newId }) {
+                    AnalyticsService.logChangeStop(
+                        field: label == "FROM" ? "from" : "to",
+                        stop: stop.shortName
+                    )
+                }
+            }
         }
     }
 }
