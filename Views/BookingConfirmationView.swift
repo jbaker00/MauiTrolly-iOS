@@ -198,6 +198,7 @@ struct BookingConfirmationView: View {
                 from: fromStop.shortName,
                 to: toStop.shortName
             )
+            ReviewPromptService.recordRideViewedAndMaybePrompt()
         }
     }
 }

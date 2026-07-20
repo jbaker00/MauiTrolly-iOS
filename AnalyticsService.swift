@@ -19,6 +19,7 @@ enum AnalyticsService {
         static let changeStop       = "change_stop"
         static let changeSearchType = "change_search_type"
         static let searchAgain      = "search_again"
+        static let reviewPrompt     = "review_prompt_requested"
     }
 
     // MARK: - Public API
@@ -46,6 +47,13 @@ enum AnalyticsService {
         Analytics.logEvent(Event.viewRideDetails, parameters: [
             "from_stop": fromStop,
             "to_stop": toStop,
+        ])
+    }
+
+    /// Logged when the app asks StoreKit for a rating prompt
+    static func logReviewPromptRequested(rideViews: Int) {
+        Analytics.logEvent(Event.reviewPrompt, parameters: [
+            "ride_views": rideViews,
         ])
     }
 

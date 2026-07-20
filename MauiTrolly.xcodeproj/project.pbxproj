@@ -25,6 +25,7 @@
 		FB0001000000000000000000000000001 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FB0001000000000000000000000000002 /* FirebaseAnalytics */; };
 		FB0001000000000000000000000000003 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FB0001000000000000000000000000004 /* FirebaseCrashlytics */; };
 		FB0001000000000000000000000000007 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0001000000000000000000000000008 /* AnalyticsService.swift */; };
+		FB000100000000000000000000000000C /* ReviewPromptService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB000100000000000000000000000000D /* ReviewPromptService.swift */; };
 		FB0001000000000000000000000000009 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = FB000100000000000000000000000000A /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		E01F672BD37B402E8507BE6B37FA12A5 /* BookingConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingConfirmationView.swift; sourceTree = "<group>"; };
 		E424ABE839BF44F7B1F802CD083D015D /* TrolleyScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrolleyScheduleService.swift; sourceTree = "<group>"; };
 		FB0001000000000000000000000000008 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
+		FB000100000000000000000000000000D /* ReviewPromptService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPromptService.swift; sourceTree = "<group>"; };
 		FB000100000000000000000000000000A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +117,7 @@
 				16F9DD6D3E1143519F7B960C3843CE54 /* BannerAdView.swift */,
 				A1B2C3D4E5F60001A1B2C3D4E5F60002 /* InterstitialAdCoordinator.swift */,
 				FB0001000000000000000000000000008 /* AnalyticsService.swift */,
+				FB000100000000000000000000000000D /* ReviewPromptService.swift */,
 				100A647F72B04FC888D02596283A4288 /* ATTAuthorization.swift */,
 				ABC123DEF4567890ABC123DEF4567891 /* Assets.xcassets */,
 				0F38776949194530DFE63CBFA1F80F0 /* Info.plist */,
@@ -250,6 +253,7 @@
 				A1B2C3D4E5F60001A1B2C3D4E5F60001 /* InterstitialAdCoordinator.swift in Sources */,
 				100A647F72B04FC888D02596283A4287 /* ATTAuthorization.swift in Sources */,
 				FB0001000000000000000000000000007 /* AnalyticsService.swift in Sources */,
+				FB000100000000000000000000000000C /* ReviewPromptService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
